@@ -13,6 +13,16 @@
 // THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
 // WHEN I click on the links in the Table of Contents
 // THEN I am taken to the corresponding section of the README
+// TODO: Include packages needed for this application
 
-const readmeDataArgs = process.argv.slice(2, process.argv.length);
-console.log(readmeDataArgs);
+// TODO: Create an array of questions for user input
+const questions = [];
+
+// TODO: Create a function to write README file
+function writeToFile(fileName, data) {}
+
+// TODO: Create a function to initialize app
+function init() {}
+
+// Function call to initialize app
+init();
