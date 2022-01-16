@@ -1,0 +1,19 @@
+{
+  "name": "readme-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/berkforbes/README-Generator.git"
+  },
+  "author": "Berk Forbes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/berkforbes/README-Generator/issues"
+  },
+  "homepage": "https://github.com/berkforbes/README-Generator#readme"
+}
