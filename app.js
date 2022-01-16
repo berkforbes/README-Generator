@@ -6,21 +6,41 @@ const promptUser = () => {
     return inquirer.prompt([
       { // WHEN I enter my project title
         type: 'input',
-        name: 'name',
-        message: 'What is your name? (Required)',
-        validate: nameInput => {
-          if (nameInput) {
+        name: 'project-title',
+        message: 'What is the title of your project? (Required)',
+        validate: projectInput => {
+          if (projectInput) {
             return true;
           } else {
-            console.log('Please enter your name!');
+            console.log('Please enter the title of your project!');
             return false;
           }
         }
       },
-      { // WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
+      { // WHEN I enter a description
         type: 'input',
-        name: 'github',
-        message: 'Enter your GitHub Username (Required)',
+        name: 'description',
+        message: 'Enter a description of your project',
+      },
+      { // WHEN I enter installation instructions
+        type: 'input',
+        name: 'install-instructions',
+        message: 'Provide installation instructions for your project'
+      },
+      { // WHEN I enter usage information
+        type: 'input',
+        name: 'usage-info',
+        message: 'Provide instructions and examples for use',
+      },
+      { // WHEN I enter contribution guidelines
+        type: 'input',
+        name: 'contribution-guidlines',
+        message: 'Provide guidelines for external contribution',
+      },
+      { // WHEN I enter test instructions
+        type: 'input',
+        name: 'test-instructions',
+        message: 'Provide instructions for tests',
         validate: githubInput => {
           if (githubInput) {
             return true;
@@ -31,10 +51,10 @@ const promptUser = () => {
         }
       },
       { // WHEN I choose a license for my application from a list of options
-        type: 'confirm',
-        name: 'confirmAbout',
-        message: 'Would you like to enter some information about yourself for an "About" section?',
-        default: true
+        type: 'checkbox',
+        name: 'languages',
+        message: 'Choose which license(s) you would like to use (Check all that apply)',
+        choices: ['MIT', 'Apache 2.0', 'ISC', 'GNU', 'Mozilla Public License 2.0', 'Unlicense']
       },
       { // WHEN I enter my GitHub username
         type: 'input',
@@ -52,7 +72,7 @@ const promptUser = () => {
       { // WHEN I enter my email address
         type: 'input',
         name: 'about',
-        message: 'Provide some information about yourself:',
+        message: 'Enter your email address',
         when: ({ confirmAbout }) => confirmAbout
       }
     ]);
