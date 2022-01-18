@@ -1,13 +1,13 @@
 // Inquirer, file system, util packages
-const inquirer = require('inquirer');
 const fs = require('fs');
-const util = require('util');
+const inquirer = require('inquirer');
 
 // App modules
-// const generateMarkdown = require('./utils/generateMarkdown.js');
+const generateReadme = require('./utils/generateMarkdown.js');
 
 // Question prompts for inquirer
-const userQuestions = [
+const userQuestions = () => {
+  return inquirer.prompt([
       { // WHEN I enter my GitHub username
         type: 'input',
         name: 'github',
@@ -23,7 +23,7 @@ const userQuestions = [
       },
       { // WHEN I enter my project title
         type: 'input',
-        name: 'project-title',
+        name: 'title',
         message: 'What is the title of your project? (Required)',
         validate: projectInput => {
           if (projectInput) {
@@ -41,22 +41,22 @@ const userQuestions = [
       },
       { // WHEN I enter installation instructions
         type: 'input',
-        name: 'install-instructions',
+        name: 'installation',
         message: 'Provide installation instructions for your project if applicable'
       },
       { // WHEN I enter usage information
         type: 'input',
-        name: 'usage-info',
+        name: 'usage',
         message: 'Provide instructions and examples for use',
       },
       { // WHEN I enter contribution guidelines
         type: 'input',
-        name: 'contribution-guidlines',
+        name: 'contributions',
         message: 'Provide guidelines for external contribution if applicable',
       },
       { // WHEN I enter test instructions
         type: 'input',
-        name: 'test-instructions',
+        name: 'tests',
         message: 'Provide instructions for tests if applicable',
       },
       { // WHEN I choose a license for my application from a list of options
@@ -69,20 +69,37 @@ const userQuestions = [
         type: 'input',
         name: 'email',
         message: 'Enter your email address',
-      }];
+      }
+  ]);
+};
+  
 
-
-
-// TODO: Create a function to initialize app
-async function init() {
-  try {
-    const userResponses = await inquirer.prompt(userQuestions)
-    console.log(userResponses)
-  }
-  catch (err) {
-    console.log(err)
-  }
+// TODO: Create a function to write README file
+const writeToFile = data => {
+  fs.writeFile ('README.md', data, err => {
+    if (err) {
+      console.log(err)
+    }
+    else {
+      console.log('Your README has been generated. Thanks for using the README-Generator!')
+    }
+  })
 }
 
-// Function call to initialize app
-init();
+// TODO: Create a function to initialize app
+userQuestions()
+// Get user answers
+  .then(userAnswers => {
+    return generateReadme(userAnswers);
+  })
+  .then (data => {
+    return writeToFile(data);
+  })
+
+// send error if errors
+  .catch(err => {
+    console.log(err)
+  })
+
+
+

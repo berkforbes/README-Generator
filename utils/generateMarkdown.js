@@ -1,63 +1,37 @@
-// // TODO: Create a function that returns a license badge based on which license is passed in
-// // If there is no license, return an empty string
-// function renderLicenseBadge(license) {}
+const generateMarkdown = data => {
+  return `# ${data.title}
 
-// // TODO: Create a function that returns the license link
-// // If there is no license, return an empty string
-// function renderLicenseLink(license) {}
-
-// // TODO: Create a function that returns the license section of README
-// // If there is no license, return an empty string
-// function renderLicenseSection(license) {}
-
-// // TODO: Create a function to generate markdown for README
-// function generateMarkdown(data) {
-//   return `# ${data.title}
-
-// `;
-// }
-
-const { rejects } = require('assert');
-const fs = require('fs');
-
-const writeFile = fileContent => {
-    return new Promise((resolve, reject) => {
-      fs.writeFile('./dist/index.html', fileContent, err => {
-        // if there's an error, reject the Promise and send the error to the Promise's `.catch()` method
-        if (err) {
-          reject(err);
-          // return out of the function here to make sure the Promise doesn't accidentally execute the resolve() function as well
-          return;
-        }
   
-        // if everything went well, resolve the Promise and send the successful data to the `.then()` method
-        resolve({
-          ok: true,
-          message: 'File created!'
-        });
-      });
-    });
-  };
-  
+  ## Description
+  ${data.description}
 
-const copyFile = () => {
-    return new Promise((resolve, reject) => {
-        fs.copyFile('./src/style.css','./dist/style.css', err => {
-            if (err) {
-              reject(err);
-              return;
-            }
-           resolve({
-               ok: true,
-               message:'Stylesheet Created'
-           }); 
-        });
-    });
+  ## Table of Contents
+  - [Installation] (#installation)
+  - [Usage] (#usage)
+  - [Credits] (#credits)
+  - [License] (#license)
+  - [Contributing] (#contributions)
+  - [Tests] (#tests)
+
+  ## Installation
+  ${data.installation}
+
+  ## Usage
+  ${data.usage}
+
+  ## License
+  This project is licensed under ${data.license}
+
+  ## Contributing
+  ${data.contributions}
+
+  ## Test
+  ${data.tests}
+
+  ## Questions
+  If you have questions about this project please contact me at ${data.email}
+  Check out more of my projects at https://github.com/${data.github}
+  `
 }
 
-module.exports = {
-    writeFile, copyFile
-};
-
-
- module.exports = generateMarkdown;
+module.exports = generateMarkdown;
