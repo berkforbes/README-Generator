@@ -1,5 +1,6 @@
 const generateMarkdown = data => {
   return `# ${data.title}
+
   
   ## Description
   ${data.description}
@@ -9,8 +10,27 @@ const generateMarkdown = data => {
   - [Usage] (#usage)
   - [Credits] (#credits)
   - [License] (#license)
-  - [Contributions] (#contributions)
+  - [Contributing] (#contributions)
   - [Tests] (#tests)
+
+  ## Installation
+  ${data.installation}
+
+  ## Usage
+  ${data.usage}
+
+  ## License
+  This project is licensed under ${data.license}
+
+  ## Contributing
+  ${data.contributions}
+
+  ## Test
+  ${data.tests}
+
+  ## Questions
+  If you have questions about this project please contact me at ${data.email}
+  Check out more of my projects at https://github.com/${data.github}
   `
 }
 
