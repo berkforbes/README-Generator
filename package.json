@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/berkforbes/README-Generator/issues"
   },
-  "homepage": "https://github.com/berkforbes/README-Generator#readme"
+  "homepage": "https://github.com/berkforbes/README-Generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  }
 }
