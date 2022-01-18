@@ -4,7 +4,7 @@ const fs = require('fs');
 const util = require('util');
 
 // App modules
-const generateMarkdown = require('./utils/generateMarkdown.js');
+// const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // Question prompts for inquirer
 const userQuestions = [
@@ -74,7 +74,15 @@ const userQuestions = [
 
 
 // TODO: Create a function to initialize app
-function init() {}
+async function init() {
+  try {
+    const userResponses = await inquirer.prompt(userQuestions)
+    console.log(userResponses)
+  }
+  catch (err) {
+    console.log(err)
+  }
+}
 
 // Function call to initialize app
 init();
