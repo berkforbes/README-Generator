@@ -24,7 +24,7 @@
   ## Contributing
   Please feel free to contribute to this project! Refer to the description and installation instructions for more details.
 
-  ## Test
+  ## Tests
   Run npm test from the CLI.
 
   ## Questions
