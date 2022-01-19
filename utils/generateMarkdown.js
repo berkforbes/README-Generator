@@ -8,10 +8,10 @@ const generateMarkdown = data => {
   ## Table of Contents
   - [Installation](#installation)
   - [Usage](#usage)
-  - [Credits](#credits)
   - [License](#license)
   - [Contributing](#contributions)
   - [Tests](#tests)
+  - [Questions](#questions)
 
   ## Installation
   ${data.installation}

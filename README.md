@@ -1,16 +1,16 @@
-# Command Line README Generator
+# README Generator
   ![Github licence](https://img.shields.io/badge/license-MIT-blue.svg)
   
   ## Description
-  This application was created to generate a professional README.md for developers. Using CLI and Node.js the user will answer a series of questions which will be used to generate the README file. 
+  This application was created to generate a professional README.md for developers. Using CLI and Node.js the user will answer a series of questions which will be used to generate the README file.
 
   ## Table of Contents
   - [Installation](#installation)
   - [Usage](#usage)
-  - [Credits](#credits)
   - [License](#license)
   - [Contributing](#contributions)
   - [Tests](#tests)
+  - [Questions](#questions)
 
   ## Installation
   Simply clone this repository in Github and install Node.js.
