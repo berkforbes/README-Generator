@@ -25,7 +25,7 @@ const generateMarkdown = data => {
   ## Contributing
   ${data.contributions}
 
-  ## Test
+  ## Tests
   ${data.tests}
 
   ## Questions
