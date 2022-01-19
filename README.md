@@ -18,7 +18,7 @@
   ## Usage
   Using inquirer from the command line answer the promted questions regarding your project.
 
-  https://user-images.githubusercontent.com/91864476/150072358-df89adb4-7ef4-4196-9130-4bb451490e44.mov
+  https://user-images.githubusercontent.com/91864476/150073791-b861c753-a9cb-4aba-87a9-38d0fc340df6.mov
 
   https://watch.screencastify.com/v/44OREQTNsnb1WWjZfeyF
 
