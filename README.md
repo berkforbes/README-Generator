@@ -17,6 +17,12 @@
 
   ## Usage
   Using inquirer from the command line answer the promted questions regarding your project.
+  
+
+https://user-images.githubusercontent.com/91864476/150071937-9483c6aa-f314-4dca-a74d-5bf56fa52bba.mov
+
+
+  https://watch.screencastify.com/v/44OREQTNsnb1WWjZfeyF
 
   ## License
   This project is licensed under MIT
