@@ -61,7 +61,7 @@ const userQuestions = () => {
       },
       { // WHEN I choose a license for my application from a list of options
         type: 'checkbox',
-        name: 'languages',
+        name: 'license',
         message: 'Which license(s) you would like to use (Check all that apply)',
         choices: ['MIT', 'Apache 2.0', 'ISC', 'GNU', 'Mozilla Public License 2.0', 'Unlicense']
       },
@@ -90,8 +90,10 @@ const writeToFile = data => {
 userQuestions()
 // Get user answers
   .then(userAnswers => {
+    console.log(userAnswers)
     return generateReadme(userAnswers);
   })
+  // Write data to page
   .then (data => {
     return writeToFile(data);
   })

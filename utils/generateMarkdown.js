@@ -1,17 +1,17 @@
 const generateMarkdown = data => {
   return `# ${data.title}
-
+  ![Github licence](https://img.shields.io/badge/license-${data.license}-blue.svg)
   
   ## Description
   ${data.description}
 
   ## Table of Contents
-  - [Installation] (#installation)
-  - [Usage] (#usage)
-  - [Credits] (#credits)
-  - [License] (#license)
-  - [Contributing] (#contributions)
-  - [Tests] (#tests)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Credits](#credits)
+  - [License](#license)
+  - [Contributing](#contributions)
+  - [Tests](#tests)
 
   ## Installation
   ${data.installation}

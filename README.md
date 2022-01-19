@@ -1,25 +1,25 @@
-# dsafdfa
-  ![Github licence](http://img.shields.io/badge/license-undefined-blue.svg)
+# README Generator
+  ![Github licence](https://img.shields.io/badge/license-MIT-blue.svg)
   
   ## Description
-  sadfsdaf
+  A simple Readme generator for devs
 
   ## Table of Contents
-  - [Installation] (#installation)
-  - [Usage] (#usage)
-  - [Credits] (#credits)
-  - [License] (#license)
-  - [Contributing] (#contributions)
-  - [Tests] (#tests)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Credits](#credits)
+  - [License](#license)
+  - [Contributing](#contributions)
+  - [Tests](#tests)
 
   ## Installation
-  sdfsdf
+  
 
   ## Usage
   
 
   ## License
-  This project is licensed under undefined
+  This project is licensed under MIT
 
   ## Contributing
   
@@ -28,6 +28,6 @@
   
 
   ## Questions
-  If you have questions about this project please contact me at dsfsd
-  Check out more of my projects at https://github.com/dsfadf
+  If you have questions about this project please contact me at berkforbes@yahoo.com
+  Check out more of my projects at https://github.com/Berkforbes
   
